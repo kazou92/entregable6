@@ -1,0 +1,15 @@
+.login{
+  
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 40px;
+  
+}
+.login_form{
+    width: max-content;
+    padding: 60px;
+    border-radius: 10px;
+    background-color: brown;
+   
+}

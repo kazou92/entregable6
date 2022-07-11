@@ -14,6 +14,7 @@ import { useEffect } from 'react'
 import {getAllProduct} from "./slice/products.slice"
 import FooterScreen from './components/footer/FooterScreen'
 import PurchaseScreen from './components/purchases/PurchaseScreen'
+import CardScreen from './components/Cart/CardScreen'
 
 
 function App() {
@@ -33,7 +34,7 @@ function App() {
         <Route path='/login' element = {<LoginScreem/>} />
 
         <Route  element={<ProtectedRoute />}>
-          <Route path='/cart' element ={<Cart/>}/>
+          <Route path='/cart' element ={<CardScreen/>}/>
           <Route path='/purchase' element ={<PurchaseScreen/>}/>
           <Route path='/products/:id' element={<ProductScreem/> }/>
 

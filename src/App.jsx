@@ -6,12 +6,14 @@ import HomeCreem from './components/Home/style/HomeCreem'
 import LoginScreem from './login/LoginScreem'
 import ProtectedRoute from './components/ProtectedRoute'
 import Cart from './components/Cart/Cart'
-import Purchase from './components/purchases/Purchase'
+import Purchase from './components/purchases/PurchaseScreen'
 import HeaderScreem from './components/content/HeaderScreem'
 import ProductScreem from './products/ProductScreem'
 import {useDispatch} from "react-redux"
 import { useEffect } from 'react'
 import {getAllProduct} from "./slice/products.slice"
+import FooterScreen from './components/footer/FooterScreen'
+import PurchaseScreen from './components/purchases/PurchaseScreen'
 
 
 function App() {
@@ -32,13 +34,14 @@ function App() {
 
         <Route  element={<ProtectedRoute />}>
           <Route path='/cart' element ={<Cart/>}/>
-          <Route path='/purchase' element ={<Purchase/>}/>
+          <Route path='/purchase' element ={<PurchaseScreen/>}/>
           <Route path='/products/:id' element={<ProductScreem/> }/>
 
         </Route>
 
 
       </Routes>
+      <FooterScreen/>
     </div>
   )
 }

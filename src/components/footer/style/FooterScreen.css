@@ -1,0 +1,33 @@
+.footer {
+    padding: 20px;
+    background-color:aquamarine;
+    color: blue;
+  }
+  .footer__text {
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.2rem;
+  }
+  .redes__items {
+    width: 35px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    background-color: #999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media screen and (min-width: 720px) {
+    .footer {
+      padding: 50px;
+    }
+    .footer__text{
+      margin-bottom: 30px;
+    }
+  } 

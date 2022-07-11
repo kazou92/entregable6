@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import getConfigs from '../../utils/getConfigs'
+import PurchaseCard from './PurchaseCard'
 
-const Purchase = () => {
+const PurchaseScreen = () => {
 
   const [purchase,setPurchase]=useState()
 
@@ -16,8 +17,20 @@ const Purchase = () => {
 
   console.log(purchase)
   return (
-    <div>Purchase</div>
+    <div className='purchase'>
+      <h2 className='purchase_title'>purchase</h2>
+      <div className='purchase_container'>
+        {
+          purchase?.map(purchas =>(
+            <PurchaseCard
+            key={purchas.id}
+            purchas={purchas}/>
+          ))
+        }
+      </div>
+
+    </div>
   )
 }
 
-export default Purchase
+export default PurchaseScreen

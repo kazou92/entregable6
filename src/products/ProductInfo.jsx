@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import "./style/productinfo.css"
 
 const ProductInfo = ({ products }) => {
   const [count,setCount]= useState(1)
@@ -10,7 +11,7 @@ const ProductInfo = ({ products }) => {
     }
   }
 
-  const plusOne =()=>setCount(count + 1)
+  const plusOne = () =>setCount(count + 1)
     return (
         <article className='product_info'>
             <h2 className='product_info_title'>{products?.title}</h2>
